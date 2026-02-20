@@ -1,0 +1,5 @@
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#004c3a"/>
+  <path d="M8 22V10l8 8 8-8v12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#004c3a">Matproof</text>
+</svg>

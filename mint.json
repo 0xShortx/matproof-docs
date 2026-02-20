@@ -2,8 +2,11 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Matproof",
   "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg",
     "href": "https://matproof.com"
   },
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#004c3a",
     "light": "#00a36c",
