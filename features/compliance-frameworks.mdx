@@ -1,0 +1,73 @@
+---
+title: "Compliance Frameworks"
+description: "DORA, ISO 27001, SOC 2, NIS2, GDPR, and CSRD — all in one platform."
+---
+
+## Supported frameworks
+
+Matproof supports the following compliance frameworks out of the box:
+
+| Framework | Region | Key audience |
+|-----------|--------|-------------|
+| **DORA** | EU | Financial institutions, ICT providers |
+| **ISO 27001:2022** | Global | Any organization |
+| **SOC 2 Type II** | US/Global | SaaS companies, service providers |
+| **NIS2** | EU | Operators of essential/important services |
+| **GDPR** | EU/EEA | Any org processing EU personal data |
+| **CSRD/ESRS** | EU | Large companies, listed SMEs |
+| **BaFin BAIT/ZAIT** | Germany | German banks, insurance companies |
+
+## Cross-framework mapping
+
+Matproof automatically maps controls across frameworks. When you collect evidence for one framework, it often satisfies requirements in others:
+
+```
+Example:
+MFA policy → satisfies:
+  - ISO 27001 A.8.5 (Secure authentication)
+  - SOC 2 CC6.1 (Logical access controls)
+  - DORA Art. 9 (ICT security controls)
+  - NIS2 Art. 21 (Authentication measures)
+```
+
+This reduces duplication significantly — especially for organizations pursuing multiple certifications simultaneously.
+
+## Adding a framework
+
+1. Go to **Frameworks** in the sidebar
+2. Click **Add framework**
+3. Select your framework and scope
+4. Matproof runs a gap assessment against your existing evidence
+
+## Framework structure
+
+Each framework is broken down into:
+
+```
+Framework
+  └── Category (e.g., "Access Control")
+        └── Control (e.g., "Implement MFA")
+              ├── Description
+              ├── Guidance
+              ├── Evidence requirements
+              └── Status (Met / Partial / Not met)
+```
+
+## Readiness score
+
+Each framework shows a **readiness score** — the percentage of controls with sufficient evidence. This gives you a quick view of audit readiness.
+
+<Tip>
+  Use the readiness score as a leading indicator. Aim for >90% before scheduling an audit.
+</Tip>
+
+## Audit export
+
+When you're ready for an audit, export a complete **evidence package**:
+- Control list with status
+- Evidence documents
+- Policy versions
+- Risk register
+- Vendor register
+
+Exported as a ZIP with folder structure matching the framework's control categories.

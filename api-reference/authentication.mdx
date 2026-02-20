@@ -1,0 +1,53 @@
+---
+title: "Authentication"
+description: "How to authenticate with the Matproof API."
+---
+
+## Getting your API key
+
+1. Log in to [app.matproof.com](https://app.matproof.com)
+2. Go to **Settings → API Keys**
+3. Click **Create API key**
+4. Copy and store your key securely — it won't be shown again
+
+## Using your API key
+
+Pass your API key in the `Authorization` header:
+
+```bash
+curl https://api.matproof.com/v1/vendors \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+## API key scopes
+
+When creating an API key, select the required scopes:
+
+| Scope | Access |
+|-------|--------|
+| `read:vendors` | List and read vendor data |
+| `write:vendors` | Create and update vendors |
+| `read:evidence` | Read evidence files |
+| `write:evidence` | Upload evidence |
+| `read:controls` | Read control status |
+| `write:controls` | Update control status |
+| `read:risks` | Read risk register |
+| `write:risks` | Create and update risks |
+| `read:csrd` | Read CSRD/ESG data |
+| `write:csrd` | Submit ESG data |
+
+## Security best practices
+
+- Store API keys in environment variables, never in code
+- Use the minimum required scopes
+- Rotate keys regularly
+- Delete keys you're no longer using
+- Use separate keys for different applications
+
+## Error responses
+
+| Status | Meaning |
+|--------|---------|
+| `401 Unauthorized` | Missing or invalid API key |
+| `403 Forbidden` | Valid key but insufficient scope |
+| `429 Too Many Requests` | Rate limit exceeded |

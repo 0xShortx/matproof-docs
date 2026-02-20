@@ -1,0 +1,83 @@
+---
+title: "Scope 3 GHG Calculations"
+description: "How Matproof calculates Scope 3 greenhouse gas emissions from supplier data."
+---
+
+## What is Scope 3?
+
+Scope 3 emissions are **indirect GHG emissions** that occur in a company's value chain — both upstream (suppliers) and downstream (customers, product use, end-of-life).
+
+Under **ESRS E1-6**, CSRD reporters must disclose Scope 3 emissions across all relevant GHG Protocol categories.
+
+## The 15 Scope 3 categories
+
+| Category | Type | Typical data source |
+|----------|------|---------------------|
+| 1. Purchased goods & services | Upstream | Supplier spend + emission factors |
+| 2. Capital goods | Upstream | Asset purchases |
+| 3. Fuel & energy-related | Upstream | Energy supplier data |
+| 4. Upstream transportation | Upstream | Logistics provider data |
+| 5. Waste generated in operations | Upstream | Waste handler data |
+| 6. Business travel | Upstream | HR / travel booking |
+| 7. Employee commuting | Upstream | Employee survey |
+| 8. Upstream leased assets | Upstream | Lease agreements |
+| 9. Downstream transportation | Downstream | Customer delivery data |
+| 10. Processing of sold products | Downstream | Customer data |
+| 11. Use of sold products | Downstream | Product performance data |
+| 12. End-of-life treatment | Downstream | Industry averages |
+| 13. Downstream leased assets | Downstream | Lease data |
+| 14. Franchises | Downstream | Franchisee data |
+| 15. Investments | Downstream | Financial data |
+
+## Calculation methods in Matproof
+
+Matproof supports the three GHG Protocol calculation methods:
+
+### Spend-based method
+Uses supplier spend × sector-specific emission factors.
+- **Best for:** First-year reporting, when supplier data is unavailable
+- **Data needed:** Spend by category, country
+- **Emission factors:** Exiobase + DEFRA databases (updated annually)
+
+### Activity-based method
+Uses physical activity data × emission factors.
+- **Best for:** High-spend categories where accuracy matters
+- **Data needed:** Quantities (kg, km, kWh, etc.) from suppliers
+- **More accurate** than spend-based
+
+### Supplier-specific method
+Uses actual emissions data reported by suppliers.
+- **Best for:** Key suppliers with robust carbon accounting
+- **Data needed:** Supplier's verified Scope 1 + 2 emissions, allocated to your share
+- **Most accurate** — preferred by auditors
+
+## Setting up Scope 3 in Matproof
+
+1. **Go to CSRD → Scope 3**
+2. **Select which categories are material** (based on your DMA results)
+3. **Choose calculation method per category**
+4. **Map your supplier data** — either from questionnaire responses or manual input
+5. **Review calculations** — Matproof shows the math and data sources
+6. **Export** — results mapped to ESRS E1-6 disclosure requirements
+
+## Collecting data from suppliers
+
+The supplier questionnaire includes Scope 3 data request fields:
+
+- For **spend-based**: Matproof uses your procurement data automatically
+- For **activity-based**: Questionnaire asks for quantities (e.g., "How many tonnes of goods did you deliver to us?")
+- For **supplier-specific**: Questionnaire asks for their verified Scope 1+2 emissions and revenue attribution
+
+## Emission factors
+
+Matproof uses the following emission factor databases:
+- **Exiobase** — multi-regional input-output tables (spend-based)
+- **DEFRA** — UK government emission factors (activity-based)
+- **ecoinvent** — lifecycle assessment database (product-level)
+- **IPCC AR6** — global warming potentials
+
+Databases are updated annually. You can see which version was used in your calculation audit trail.
+
+<Note>
+  ESRS E1-6 requires reporting Scope 3 emissions in **CO2 equivalent (CO2e)**, covering all 6 GHGs from the Kyoto Protocol: CO2, CH4, N2O, HFCs, PFCs, SF6.
+</Note>

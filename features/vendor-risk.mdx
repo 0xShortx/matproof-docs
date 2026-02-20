@@ -1,0 +1,80 @@
+---
+title: "Vendor Risk Management"
+description: "Manage third-party risk, Art. 28 register, and supplier questionnaires."
+---
+
+## Overview
+
+Matproof's vendor risk module helps you manage the complete lifecycle of third-party relationships — from onboarding and risk assessment to ongoing monitoring.
+
+## Key features
+
+- **Vendor register** — centralized register of all vendors with risk classification
+- **Art. 28 register** — GDPR-compliant data processing agreements register
+- **DORA TPRM** — ICT third-party risk management per DORA requirements
+- **Risk questionnaires** — send and collect vendor security assessments
+- **Sanctions screening** — automated screening against EU/UN/OFAC lists
+- **Criticality classification** — DORA-compliant ICT service criticality ratings
+
+## Getting started
+
+### Import vendors
+
+Go to **Vendor Risk → Vendors → Import** and upload a CSV:
+
+```csv
+name,category,contact_email,country,contract_value,ict_service
+Hetzner Online,Infrastructure,vendor@hetzner.com,DE,50000,yes
+AWS,Cloud,vendor@aws.com,US,200000,yes
+Calendly,SaaS,vendor@calendly.com,US,5000,no
+```
+
+### Classify vendors
+
+For each vendor, set:
+- **Category** (ICT, professional services, goods, etc.)
+- **Criticality** (critical, important, standard) — required for DORA
+- **Data processing** (yes/no) — triggers Art. 28 DPA requirement
+
+### Send risk questionnaires
+
+Matproof includes pre-built questionnaire templates:
+- DORA ICT third-party assessment
+- ISO 27001 vendor security questionnaire
+- GDPR data processor assessment
+- General vendor risk questionnaire
+
+Vendors respond via secure portal — no account needed.
+
+## Art. 28 Register
+
+The Art. 28 register tracks all vendors who process personal data on your behalf.
+
+For each entry:
+- Vendor name and contact
+- Categories of personal data processed
+- Purpose of processing
+- Data transfer mechanisms (for non-EU vendors)
+- DPA status (signed / pending / not required)
+
+Export as PDF or Excel for your Data Protection Officer or auditors.
+
+## DORA Compliance
+
+For ICT service providers, Matproof tracks DORA-specific requirements:
+
+- **Criticality classification** per EBA guidelines
+- **Contractual requirements** checklist (per DORA Art. 30)
+- **Exit strategies** documentation
+- **Concentration risk** analysis (dependency on single providers)
+- **Sub-processor** tracking
+
+## Sanctions screening
+
+Matproof screens all vendors against:
+- EU Consolidated Sanctions List
+- UN Security Council Sanctions
+- OFAC Specially Designated Nationals (SDN)
+- UK Financial Sanctions
+
+Screening runs automatically on import and monthly thereafter. Alerts trigger if a vendor appears on any list.

@@ -1,0 +1,94 @@
+---
+title: "Supplier Questionnaires"
+description: "Automate ESG data collection from your supplier base using Matproof's questionnaire system."
+---
+
+## Overview
+
+Matproof sends ESRS-aligned questionnaires to your suppliers and collects the responses automatically. Suppliers respond via a **simple web portal** — they don't need a Matproof account.
+
+## Setting up supplier questionnaires
+
+### 1. Import your supplier list
+
+Go to **CSRD → Suppliers → Import**.
+
+Upload a CSV with columns:
+```
+company_name, contact_email, contact_name, spend_category, country, tier
+```
+
+Or add suppliers manually one by one.
+
+### 2. Categorize suppliers
+
+After import, categorize suppliers by:
+- **Tier** (Tier 1 = direct, Tier 2 = indirect)
+- **Spend category** (e.g., raw materials, logistics, IT services)
+- **Risk level** (high, medium, low) — Matproof pre-fills based on country and sector
+
+This determines which questionnaire template is sent.
+
+### 3. Select questionnaire templates
+
+Matproof includes pre-built templates mapped to ESRS:
+
+| Template | Covers |
+|----------|--------|
+| Standard ESRS | All material ESRS topics, general |
+| Scope 3 emissions (E1) | GHG data, energy consumption |
+| Labour practices (S2) | Working conditions, wages, safety |
+| Business conduct (G1) | Anti-corruption, ethics |
+| Full ESRS pack | All of the above combined |
+
+You can also create custom templates in the questionnaire builder.
+
+### 4. Send questionnaires
+
+Select suppliers and click **Send questionnaire**. Matproof:
+
+1. Generates a unique secure link for each supplier
+2. Sends the invitation email from your domain (or matproof.com)
+3. Tracks open and completion rates
+4. Sends automated reminders (configurable: 7, 14, 21 days)
+
+### 5. Monitor responses
+
+Track response status in the **Response Dashboard**:
+- Not opened
+- In progress
+- Submitted
+- Validated ✓
+
+Matproof automatically validates submitted data for:
+- Required fields completion
+- Data format (e.g., emissions in tCO2e)
+- Out-of-range values (flags unusual numbers for review)
+
+## Supplier experience
+
+Suppliers receive an email with a link to a **branded questionnaire portal**. They can:
+- Complete the form in their own language (EN, DE, FR, ES, IT, NL)
+- Save progress and return later
+- Upload supporting documents
+- Ask clarifying questions via the portal
+
+No account creation or software installation required.
+
+## Data validation and follow-up
+
+After submission, you can:
+- **Approve** the response as-is
+- **Request clarification** — sends the supplier an email with specific questions
+- **Reject** and ask for resubmission
+
+All communication is tracked in the audit log.
+
+## Export and reporting
+
+Collected data feeds directly into:
+- Scope 3 calculations (for E1 data)
+- ESRS data point mapping
+- Your CSRD report export
+
+You can also export raw supplier responses as CSV or Excel for external reporting tools.

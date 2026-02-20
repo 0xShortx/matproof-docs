@@ -1,0 +1,111 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Matproof",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg",
+    "href": "https://matproof.com"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#004c3a",
+    "light": "#00a36c",
+    "dark": "#002d22",
+    "anchors": {
+      "from": "#004c3a",
+      "to": "#00a36c"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@matproof.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Sign in",
+    "url": "https://app.matproof.com"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Changelog",
+      "icon": "megaphone",
+      "url": "changelog"
+    },
+    {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://matproof.com/contact"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "concepts"
+      ]
+    },
+    {
+      "group": "Core Features",
+      "pages": [
+        "features/compliance-frameworks",
+        "features/policy-management",
+        "features/evidence-collection",
+        "features/risk-management",
+        "features/vendor-risk",
+        "features/csrd-supply-chain"
+      ]
+    },
+    {
+      "group": "CSRD Module",
+      "pages": [
+        "csrd/overview",
+        "csrd/double-materiality",
+        "csrd/supplier-questionnaires",
+        "csrd/scope3-calculations",
+        "csrd/esrs-mapping",
+        "csrd/reporting"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "integrations/overview",
+        "integrations/api"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/authentication",
+        "api-reference/endpoints"
+      ]
+    },
+    {
+      "group": "Changelog",
+      "pages": [
+        "changelog/overview"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "linkedin": "https://www.linkedin.com/company/matproof",
+    "github": "https://github.com/matproof"
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
+  "search": {
+    "prompt": "Search Matproof docs..."
+  }
+}

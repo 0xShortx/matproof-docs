@@ -1,0 +1,43 @@
+---
+title: "API Integration"
+description: "Push evidence and data to Matproof via API."
+---
+
+## Overview
+
+Use the Matproof REST API to push evidence from your own tools, trigger assessments, or build custom integrations.
+
+## Base URL
+
+```
+https://api.matproof.com/v1
+```
+
+## Authentication
+
+See [API Authentication](/api-reference/authentication) for how to get and use your API key.
+
+## Use cases
+
+- Push evidence from your CI/CD pipeline (e.g., test results, security scan reports)
+- Sync vendor data from your procurement system
+- Trigger compliance assessments from external workflows
+- Export data to your own reporting tools
+
+## Rate limits
+
+| Plan | Requests per minute |
+|------|---------------------|
+| Starter | 60 |
+| Professional | 300 |
+| Enterprise | Unlimited |
+
+## Webhooks
+
+Matproof can send webhooks to your systems when:
+- A vendor submits a questionnaire response
+- A control status changes
+- Evidence is about to expire
+- A risk score changes
+
+Configure webhooks in **Settings → Webhooks**.

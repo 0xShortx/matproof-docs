@@ -1,0 +1,88 @@
+---
+title: "Risk Management"
+description: "Identify, assess, and treat risks across your compliance program."
+---
+
+## Overview
+
+Matproof's risk management module helps you identify, document, and track risks — with automatic linkage to the controls designed to mitigate them.
+
+## Risk register
+
+The risk register is your central view of all identified risks.
+
+Each risk includes:
+- **Risk ID** — unique identifier
+- **Category** — cybersecurity, operational, compliance, financial, etc.
+- **Description** — what the risk is
+- **Likelihood** — probability (1-5)
+- **Impact** — severity (1-5)
+- **Inherent risk score** — Likelihood × Impact (before controls)
+- **Residual risk score** — risk remaining after controls
+- **Owner** — accountable person
+- **Treatment** — accept, mitigate, transfer, avoid
+- **Controls** — linked controls that reduce this risk
+- **Status** — open, in treatment, accepted, closed
+
+## Risk scoring
+
+Matproof uses a 5×5 risk matrix:
+
+```
+Impact:  1 (Negligible) → 5 (Critical)
+Likelihood: 1 (Rare) → 5 (Almost certain)
+
+Risk score = Likelihood × Impact
+  1-5:   Low (green)
+  6-12:  Medium (amber)
+  13-19: High (red)
+  20-25: Critical (dark red)
+```
+
+## Risk treatment
+
+For each risk, select a treatment:
+
+| Treatment | When to use |
+|-----------|-------------|
+| **Mitigate** | Implement controls to reduce likelihood or impact |
+| **Accept** | Risk is within tolerance; no action needed |
+| **Transfer** | Insurance, contract clauses, outsourcing |
+| **Avoid** | Stop the activity that creates the risk |
+
+Accepted risks require documented justification and periodic review.
+
+## Linking risks to controls
+
+When you add a control to a risk, Matproof tracks how effective the control is at reducing the risk score.
+
+Example:
+```
+Risk: Unauthorized access to production database
+  Inherent: Likelihood 4 × Impact 5 = 20 (Critical)
+
+Controls applied:
+  ✓ MFA enforced on all accounts
+  ✓ Database access requires VPN
+  ✓ Access reviewed quarterly
+
+  Residual: Likelihood 2 × Impact 5 = 10 (Medium)
+```
+
+## Framework mapping
+
+Risks are automatically linked to relevant framework requirements:
+
+- **ISO 27001 Annex A** — risk treatment maps to controls
+- **DORA Art. 5-6** — ICT risk management requirements
+- **CSRD ESRS 2** — sustainability risk identification requirement
+
+## Risk assessment export
+
+Export your risk register for:
+- Audit evidence (ISO 27001, SOC 2)
+- Board reporting
+- CSRD IRO documentation
+- DORA risk management report
+
+Available in Excel, PDF, or JSON format.

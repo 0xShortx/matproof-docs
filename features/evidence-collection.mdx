@@ -1,0 +1,63 @@
+---
+title: "Evidence Collection"
+description: "Automated and manual evidence collection for compliance controls."
+---
+
+## Overview
+
+Evidence proves that your controls are implemented and working. Matproof collects evidence automatically from connected tools and lets you upload manual evidence when needed.
+
+## Automated evidence
+
+Connect your existing tools to collect evidence automatically:
+
+| Tool | Evidence collected |
+|------|-------------------|
+| GitHub | Code review requirements, branch protection, access logs |
+| Google Workspace | User access lists, MFA status, admin audit logs |
+| Jira | Incident tickets, change records, approval workflows |
+| AWS | IAM configurations, encryption settings, access logs |
+| Azure AD | User provisioning, access reviews, MFA enforcement |
+| Slack | (Coming soon) Communication audit logs |
+
+### Connecting integrations
+
+1. Go to **Settings → Integrations**
+2. Click **Connect** next to your tool
+3. Authorize via OAuth or API key
+4. Matproof begins collecting evidence immediately
+
+Evidence is collected on a configurable schedule (daily by default).
+
+## Manual evidence
+
+For controls that can't be automated, upload evidence manually:
+
+- Go to **Controls** → select a control → **Add evidence**
+- Upload PDF, image, CSV, or any file type
+- Add a description and expiry date
+- Assign to the relevant control
+
+## Evidence expiry
+
+All evidence has an **expiry date**. Matproof sends alerts 30 days before evidence expires so you can collect fresh evidence before it becomes stale.
+
+Default expiry periods:
+- Access reviews: 6 months
+- Penetration test reports: 12 months
+- Policy acknowledgements: 12 months
+- Security training: 12 months
+- Vendor assessments: 12 months
+
+You can customize expiry periods per control.
+
+## Bulk evidence upload
+
+For initial setup or annual evidence refreshes, use bulk upload:
+
+1. Go to **Evidence → Bulk upload**
+2. Download the evidence mapping template
+3. Fill in evidence files and their control mappings
+4. Upload the ZIP file
+
+Matproof automatically maps evidence to the correct controls.

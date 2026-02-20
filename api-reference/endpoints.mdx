@@ -1,0 +1,141 @@
+---
+title: "API Endpoints"
+description: "Full reference for Matproof API endpoints."
+---
+
+## Vendors
+
+### List vendors
+
+```http
+GET /v1/vendors
+```
+
+**Query parameters:**
+- `page` — page number (default: 1)
+- `limit` — results per page (default: 50, max: 200)
+- `category` — filter by category
+- `criticality` — filter by criticality (critical, important, standard)
+
+**Response:**
+```json
+{
+  "data": [
+    {
+      "id": "ven_01HXYZ",
+      "name": "Hetzner Online GmbH",
+      "category": "Infrastructure",
+      "criticality": "critical",
+      "country": "DE",
+      "riskScore": 3.2,
+      "dpaStatus": "signed",
+      "createdAt": "2025-01-15T10:00:00Z"
+    }
+  ],
+  "meta": {
+    "total": 47,
+    "page": 1,
+    "limit": 50
+  }
+}
+```
+
+### Create vendor
+
+```http
+POST /v1/vendors
+```
+
+```json
+{
+  "name": "Example Vendor GmbH",
+  "category": "SaaS",
+  "contactEmail": "security@example.com",
+  "country": "DE",
+  "criticality": "important",
+  "dataProcessing": true
+}
+```
+
+---
+
+## Evidence
+
+### Upload evidence
+
+```http
+POST /v1/controls/{controlId}/evidence
+Content-Type: multipart/form-data
+```
+
+**Form fields:**
+- `file` — the evidence file
+- `description` — description of the evidence
+- `expiresAt` — ISO 8601 date when evidence expires
+
+**Response:**
+```json
+{
+  "id": "ev_01AXYZ",
+  "controlId": "ctrl_DORA_ART28",
+  "filename": "dpa-hetzner.pdf",
+  "uploadedAt": "2026-02-20T14:30:00Z",
+  "expiresAt": "2027-02-20T00:00:00Z"
+}
+```
+
+---
+
+## CSRD / ESG Data
+
+### Submit ESG data point
+
+```http
+POST /v1/csrd/data-points
+```
+
+```json
+{
+  "esrsCode": "E1-6",
+  "dataPointId": "scope3_cat1_total",
+  "value": 45231.5,
+  "unit": "tCO2e",
+  "period": "2025",
+  "methodology": "spend-based",
+  "notes": "Calculated using Exiobase v3.8 emission factors"
+}
+```
+
+### List ESRS data points
+
+```http
+GET /v1/csrd/data-points?standard=E1&period=2025
+```
+
+---
+
+## Webhooks
+
+### Webhook event types
+
+| Event | Triggered when |
+|-------|---------------|
+| `vendor.questionnaire.submitted` | Supplier submits ESG questionnaire |
+| `control.status.changed` | Control status changes |
+| `evidence.expiring` | Evidence expires in 30 days |
+| `risk.score.changed` | Risk score changes significantly |
+
+### Webhook payload format
+
+```json
+{
+  "event": "vendor.questionnaire.submitted",
+  "timestamp": "2026-02-20T14:30:00Z",
+  "data": {
+    "vendorId": "ven_01HXYZ",
+    "vendorName": "Acme Supplier GmbH",
+    "questionnaireId": "q_01XYZABC",
+    "submittedAt": "2026-02-20T14:30:00Z"
+  }
+}
+```

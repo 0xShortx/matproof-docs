@@ -1,0 +1,77 @@
+---
+title: "Core Concepts"
+description: "Understand how Matproof structures compliance programs before diving into the features."
+---
+
+## Frameworks
+
+A **framework** is a compliance standard or regulation (e.g., DORA, ISO 27001, CSRD). Each framework has a set of **requirements** broken into **controls**.
+
+Matproof maps controls across frameworks automatically — so evidence you collect for ISO 27001 often satisfies overlapping DORA requirements.
+
+## Controls
+
+A **control** is a specific requirement within a framework. For example:
+
+- "Implement multi-factor authentication for all user accounts" (ISO 27001 A.9.4)
+- "Maintain a register of all ICT third-party service providers" (DORA Art. 28)
+
+Controls have a **status**:
+
+| Status | Meaning |
+|--------|---------|
+| ✅ Met | Evidence collected and approved |
+| ⚠️ Partial | Some evidence collected, gaps remain |
+| ❌ Not met | No evidence collected |
+| 🔄 In progress | Remediation underway |
+
+## Evidence
+
+**Evidence** is documentation that proves a control is met. It can be:
+
+- **Automated** — pulled from connected integrations (e.g., GitHub access logs)
+- **Manual** — uploaded documents (policies, screenshots, reports)
+- **AI-generated** — policies and procedures created by Matproof
+
+Evidence has an expiry date. Matproof alerts you when evidence is stale.
+
+## Policies
+
+**Policies** are formal documents that define how your organization operates. Matproof generates AI-drafted policies pre-mapped to your frameworks:
+
+- Acceptable Use Policy
+- Information Security Policy
+- Incident Response Plan
+- Business Continuity Plan
+- Data Protection Policy
+- Vendor Management Policy
+
+Policies are version-controlled. You can edit them, publish new versions, and track acknowledgements.
+
+## Vendors / Third Parties
+
+In compliance context, **vendors** are organizations that process data or provide ICT services on your behalf. Matproof helps you:
+
+- Maintain an Art. 28 register (GDPR) and TPRM register (DORA)
+- Send risk questionnaires and collect responses
+- Screen against sanctions lists
+- Monitor criticality classifications
+
+## Risk Register
+
+The **risk register** contains identified risks to your organization. Each risk has:
+
+- **Likelihood** and **impact** scores
+- **Owner** (accountable person)
+- **Treatment** (accept, mitigate, transfer, avoid)
+- **Linked controls** — what controls reduce this risk
+
+## CSRD / ESG Data
+
+For CSRD, Matproof introduces the concept of **ESG topics** and **materiality**:
+
+- **Double materiality** — assessing both financial impact on your company AND your company's impact on society/environment
+- **ESRS standards** — the EU reporting standards (E1-E5, S1-S4, G1) that define what to disclose
+- **Value chain data** — ESG metrics collected from your supplier base
+
+See the [CSRD module docs](/csrd/overview) for details.
